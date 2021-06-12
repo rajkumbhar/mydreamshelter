@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/mydreamshelter/static/css/main.94a28525.chunk.css",
-    "main.js": "/mydreamshelter/static/js/main.1fddc29a.chunk.js",
-    "main.js.map": "/mydreamshelter/static/js/main.1fddc29a.chunk.js.map",
+    "main.js": "/mydreamshelter/static/js/main.9e3da867.chunk.js",
+    "main.js.map": "/mydreamshelter/static/js/main.9e3da867.chunk.js.map",
     "runtime-main.js": "/mydreamshelter/static/js/runtime-main.cae367a1.js",
     "runtime-main.js.map": "/mydreamshelter/static/js/runtime-main.cae367a1.js.map",
     "static/js/2.5b1feb43.chunk.js": "/mydreamshelter/static/js/2.5b1feb43.chunk.js",
@@ -23,6 +23,6 @@
     "static/js/runtime-main.cae367a1.js",
     "static/js/2.5b1feb43.chunk.js",
     "static/css/main.94a28525.chunk.css",
-    "static/js/main.1fddc29a.chunk.js"
+    "static/js/main.9e3da867.chunk.js"
   ]
 }
