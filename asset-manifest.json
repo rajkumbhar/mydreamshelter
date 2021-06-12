@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/mydreamshelter/static/css/main.94a28525.chunk.css",
+    "main.js": "/mydreamshelter/static/js/main.1fddc29a.chunk.js",
+    "main.js.map": "/mydreamshelter/static/js/main.1fddc29a.chunk.js.map",
+    "runtime-main.js": "/mydreamshelter/static/js/runtime-main.cae367a1.js",
+    "runtime-main.js.map": "/mydreamshelter/static/js/runtime-main.cae367a1.js.map",
+    "static/js/2.5b1feb43.chunk.js": "/mydreamshelter/static/js/2.5b1feb43.chunk.js",
+    "static/js/2.5b1feb43.chunk.js.map": "/mydreamshelter/static/js/2.5b1feb43.chunk.js.map",
+    "index.html": "/mydreamshelter/index.html",
+    "static/css/main.94a28525.chunk.css.map": "/mydreamshelter/static/css/main.94a28525.chunk.css.map",
+    "static/js/2.5b1feb43.chunk.js.LICENSE.txt": "/mydreamshelter/static/js/2.5b1feb43.chunk.js.LICENSE.txt",
+    "static/media/Checking.b0ffad61.png": "/mydreamshelter/static/media/Checking.b0ffad61.png",
+    "static/media/Checking2.fd6e1daf.png": "/mydreamshelter/static/media/Checking2.fd6e1daf.png",
+    "static/media/Dance.95041f2b.png": "/mydreamshelter/static/media/Dance.95041f2b.png",
+    "static/media/Done.326bdd77.png": "/mydreamshelter/static/media/Done.326bdd77.png",
+    "static/media/Friends.aa5f4e9a.png": "/mydreamshelter/static/media/Friends.aa5f4e9a.png",
+    "static/media/Getverified.aaed8b1d.png": "/mydreamshelter/static/media/Getverified.aaed8b1d.png",
+    "static/media/Usecomputer.c550c1bf.png": "/mydreamshelter/static/media/Usecomputer.c550c1bf.png",
+    "static/media/friends.788ee763.mp4": "/mydreamshelter/static/media/friends.788ee763.mp4"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.cae367a1.js",
+    "static/js/2.5b1feb43.chunk.js",
+    "static/css/main.94a28525.chunk.css",
+    "static/js/main.1fddc29a.chunk.js"
+  ]
+}
