@@ -1,0 +1,611 @@
+
+
+//basic settings
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; //1rem = 10px  10px/16px = 62.5
+    
+    @media (max-width: 1100px) {
+        font-size: 50%;
+    }
+    @media (max-width: 900px) {
+        font-size: 40%;
+    }
+}
+
+body {
+    font-family:'Noto Sans KR', sans-serif;;
+    ::-webkit-scrollbar { width: 0 !important }
+}
+
+
+//variables 
+
+$primary-dark: #004445;
+$primary-dark2:#084c3f;
+$primary-medium: #184d47;
+$primary-light: #417054;
+$primary-superlight: #00444535;
+$primary-yellow: #ffd800;
+
+//--------------------------------------------- header ---------------------------------------------------//
+
+//navbar
+.user-nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 3rem 5rem;
+    background-color: transparent;
+    width: 100%;
+
+    &__logo-box {
+        
+        &__logo {
+            color: white;
+            font-size: 4rem;
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        color: white;
+        font-size: 1.8rem;
+        padding: 1rem;
+
+        &_button {
+            padding-right: 4rem;
+            @media (max-width: 650px) {
+                display: none;
+            }
+        }
+
+        &_menu {
+            font-size: 3rem;
+            display: none;
+            @media (max-width: 650px) {
+                display: flex;
+                font-size: 5rem;
+            }
+        }
+    }
+}
+
+//background-image
+.container {
+    position: relative;
+    height: 85vh;
+    //clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 73%, 0 100%);
+}
+
+.bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -10;
+    
+    &__content{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: top;
+    }
+}
+
+video{
+    filter: brightness(28%);
+}
+
+.card-container {
+    
+
+    &__card {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -35%);
+        width: 70%;
+        height: 60%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 4rem;
+
+        @media (max-width: 900px) {
+            height: 50%;
+            width: 80%;
+        }
+        @media (max-width: 650px) {
+            width: 80%;
+            height: 45%;
+        }
+        @media (max-width: 430px) {
+            width: 80%;
+            height: 45%;
+        }
+    
+        &__title {
+            text-transform:uppercase;
+            font-size: 4rem;
+            text-align: center;
+            color: white;
+
+            @media (max-width: 600px) {
+                font-size: 3rem;
+            }
+            @media (max-width: 430px) {
+                font-size: 3rem;
+            }
+        }
+    
+        &__buttons {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            font-size: 2rem;
+
+            @media (max-width: 900px) {
+                font-size: 3rem;
+            }
+            @media (max-width: 650px) {
+                font-size: 2.6rem;
+            }
+            @media (max-width: 430px) {
+                font-size: 2.5rem;
+            }
+            
+            &-button{
+                padding: 1rem 4rem;
+                background-color: white;
+                color: $primary-dark;
+                border: 1px solid $primary-dark;
+                border-radius: 1rem;
+                width: 30%;
+                font-size: inherit;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                --tw-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+                box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+
+                @media (max-width: 430px) {
+                    width: 50%;
+                }
+
+                &:not(:last-child) {
+                    margin-right: 4rem;
+                }
+
+                &-icon{
+                    margin-right: 1rem;
+                    @media (max-width: 650px) {
+                        display: none;
+                    }
+                    @media (max-width: 430px) {
+                        display: none;
+                    }
+                }
+
+                &:hover{
+                    transform: translateY(-5px);
+                    transition: all 0.2s;
+                }
+                &:active{
+                    transform: translateZ(5px);
+                }
+            }
+    
+        }
+    }
+}
+//--------------------------------------------- Second Section ---------------------------------------------------//
+
+.SecondSection {
+    width: 100%;
+
+    &__title {
+        padding-top: 2%;
+        font-size: 3rem;
+        text-align: center;
+        font-weight: 500;
+
+        @media (max-width: 650px) {
+            padding-top: 5%;
+        }
+        @media (max-width: 430px) {
+            padding-top: 5%;
+        }
+    }
+
+    &__cards {
+        display: flex;
+        justify-content: space-evenly;
+        height: 26rem;
+        margin: 3% 0;
+        @media (max-width: 650px) {
+            flex-wrap: wrap;
+            height: auto;
+        }
+
+        &-card{
+            background-color: white;
+            width: 18%;
+            height: 100%;
+            padding: 2rem;
+            border-radius: 1rem;
+            --tw-shadow: 0 7px 20px 5px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+
+            @media (max-width: 650px) {
+                width: 40%;
+                margin: 2rem;
+                height: 100%;
+            }
+            
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+
+            &-icon{
+                font-size: 6rem;
+                color: $primary-medium;
+            }
+
+            &-title {
+                font-size: 2rem;
+                font-weight: 500;
+                @media (max-width: 650px) {
+                    padding-bottom: 1rem;
+                }
+            }
+
+            &-info {
+                font-size: 1.5rem;
+                color: $primary-light;
+                text-align: center;
+            }
+
+            &:hover {
+                transition: all 0.2s;
+                --tw-shadow: 0 25px 50px -3px rgba(0, 0, 0, 0.25);
+                box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+            }
+        }
+
+    }
+}
+
+//--------------------------------------------- Third Section ---------------------------------------------------//
+
+.ThirdSection {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    &__buttons {
+        display: flex;
+        justify-content: center;
+        margin-top: 3rem;
+
+        &-button{
+        font-size: 2rem;
+        padding: 1.5rem;
+        border: 1px solid $primary-dark2;
+        border-radius: 1rem;
+        background-color: $primary-dark2;
+        color: white;
+        font-family: inherit;
+        font-weight: 100;
+        --tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+
+        @media (max-width: 430px) {
+            padding: 1rem;
+        }
+        
+        &:not(:last-child) {
+            margin-right: 4%;
+            }
+
+            &:hover{
+                transform: translateY(-5px);
+                transition: all 0.2s;
+                background-color: white;
+                color: $primary-dark;
+                --tw-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+                box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+            }
+            &:active{
+                transform: translateZ(5px);
+                --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+                box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+            }
+
+        }
+    }
+
+    &__content {
+        border: 1px solid $primary-dark;
+        border-radius: 10px;
+        width: 98%;
+        height: 45rem;
+        align-self: center;
+        margin: 3rem 0;
+        overflow-x: scroll;
+        display: flex;
+        justify-content: space-evenly;
+
+        @media (max-width: 650px) {
+            border: none;
+            flex-wrap: wrap;
+            height: auto;
+            text-align: center;
+        }
+        
+
+        &-1 {
+            //background-color: wheat;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            @media (max-width: 650px) {
+                width: 50%;
+                padding: 2rem;
+            }
+
+            &__title{
+                color: $primary-dark;
+                font-size: 2rem;
+                font-weight: 500;
+            }
+
+            &__info{
+                color: $primary-light;
+                font-size: 1.5rem;
+                padding: 0 2rem;
+                text-align: center;
+            }
+
+            &__img{
+                height: 250px;
+                width: 250px;
+
+                @media (max-width: 1100px) {
+                    height: 200px;
+                    width: 200px;
+                }
+                @media (max-width: 900px) {
+                    height: 150px;
+                    width: 150px;
+                }
+            }
+
+            &:hover {
+                transform: translateY(-5px);
+                transition: all 0.2s;
+            }
+        }
+    }
+}
+
+//--------------------------------------------- Fourth Section //contact ---------------------------------------------------//
+.Fourthsection {
+    background-color: $primary-dark2;
+    width: 94%;
+    height: 65rem;
+    border-radius: 10px;
+    margin: 4rem 0;
+    transform: translate(3%);
+    display: flex;
+    @media (max-width: 600px) {
+        flex-direction: column;
+        height: 100%;
+        padding-bottom: 7%;
+    }
+
+    &__contactinfo{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        @media (max-width: 600px) {
+            width: auto;
+        }
+
+        &-info{
+            width: 80%;
+            height: 80%;
+            color: white;
+            padding: 10px 50px;
+            font-family: inherit;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            &-hello{
+                font-size: 3.6rem;
+                padding: 1rem 0px;
+            }
+            &-tagline{
+                font-size: 2rem;
+                padding: 1rem 0;
+            }
+            &-discription{
+                font-size: 1.5rem;
+                color: #c0f0f0b6;
+            }
+            &-contact{
+                display: flex;
+                align-items: center;
+                font-family: inherit;
+                font-size: 1.5rem;
+                margin: 1.3rem 0;
+            }
+            &-icon{
+                font-size: 2rem;
+                margin-right: 1rem;
+            }
+
+        }
+    }
+
+    &__contactform{
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @media (max-width: 600px) {
+            width: auto;
+            position: relative;
+        }
+
+        &-form{
+            height: 80%;
+            width: 80%;
+            background-color: white;
+            border-radius: 15px;
+            padding: 5rem 3rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            --tw-shadow: 10px 10px 15px 10px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+
+            @media (max-width: 900px) {
+                height: 90%;
+            }
+
+            //------ form -------// 
+            &-allinput {
+                font-family: inherit;
+                font-size: 1.5rem;
+                font-weight: 500;
+
+                &-input{
+                    margin-bottom: 17px;
+                    display: flex;
+                    flex-direction: column;
+
+                    &-inputfield{
+                        font-size: 1.5rem;
+                        font-family: inherit;
+                        color: $primary-medium;
+                        outline: none;
+                        padding: 8px 10px;
+                        border: none;
+                        border-bottom: 2px solid $primary-superlight;
+                        &:hover{
+                            border-bottom: 2px solid $primary-dark2;
+                        }
+                        &:focus{
+                            outline: none;
+                        }
+                    }
+                }
+            }
+            
+
+            &-button{
+                margin-top: 4rem;
+                margin-left: auto;
+                width: 50%;
+                padding: 1rem;
+                font-size: 1.8rem;
+                border: 1px solid $primary-dark2;
+                border-radius: 1rem;
+                background-color: $primary-dark2;
+                color: white;
+                font-family: inherit;
+                font-weight: 100;
+                --tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+                box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+
+                &:hover{
+                    transform: translateY(-5px);
+                    transition: all 0.1s;
+                    background-color: $primary-light;
+                    //color: $primary-dark;
+                    --tw-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+                    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+                }
+                &:active{
+                    transform: translateZ(5px);
+                    --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+                    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+                }
+            }
+        }
+    }
+}
+
+//--------------------------------------------- Fourth Section ---------------------------------------------------//
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    margin: 10rem 0 0 0;
+    background-color: $primary-superlight;
+
+    &__links{
+        display: flex;
+        justify-content: space-around;
+        margin-top: 3rem;
+
+        &-link{
+
+            &__logo{
+                font-size: 4rem;
+                font-weight: 600;
+                color: $primary-dark2;
+            }
+
+            &__copyright{
+                font-size: 1.5rem;
+            }
+
+            &__heading{
+                font-weight: 700;
+                font-size: 1.9rem;
+                margin-bottom: 1rem;
+                color: $primary-dark2;
+            }
+
+            &__items{
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+    &__icons{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 5rem 0;
+
+        &-icon{
+            font-size: 3rem;
+            margin: 0 1rem;
+            color: $primary-dark2;
+        }
+    }
+}
