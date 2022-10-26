@@ -1,6 +1,7 @@
 import React from "react";
 import {FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaYoutube} from 'react-icons/fa';
 import { AiOutlineCopyrightCircle } from 'react-icons/ai';
+import {Link} from 'react-scroll';
 
 const Footer = () => {
     return (
@@ -21,18 +22,18 @@ const Footer = () => {
                 <div className="footer__links-link">
                     <div className="footer__links-link__heading">Company</div>
                     <div className="footer__links-link__items">About Us</div>
-                    <div className="footer__links-link__items">How it Works?</div>
+                    <Link to="howitworks" smooth={true}><div className="footer__links-link__items">How it Works?</div></Link>
                     <div className="footer__links-link__items">Blog</div>
                     <div className="footer__links-link__items">Refer & Earn</div>
-                    <div className="footer__links-link__items">Carrers</div>
+                    <div className="footer__links-link__items">Careers</div>
                     <div className="footer__links-link__items">Founders</div>
                 </div>
 
                 <div className="footer__links-link">
                     <div className="footer__links-link__heading">Support</div>
-                    <div className="footer__links-link__items">Contact Us</div>
+                    <Link to="contactus" smooth={true}><div className="footer__links-link__items">Help</div></Link>
                     <div className="footer__links-link__items">FAQ</div>
-                    <div className="footer__links-link__items">Help Center</div>
+                    <div className="footer__links-link__items">Contact Us</div>
                     <div className="footer__links-link__items">Terms & Conditions</div>
                     <div className="footer__links-link__items">Privacy Policy</div>
                 </div>

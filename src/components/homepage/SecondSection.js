@@ -37,7 +37,7 @@ const SecondSection = () => {
                         <div className="SecondSection__cards-card">
                             <BiSupport className="SecondSection__cards-card-icon"/>
                             <div className="SecondSection__cards-card-title"> 24x7 Support </div>
-                            <div className="SecondSection__cards-card-info">any Questions? we'll help you at Anytime, Anywhere</div>
+                            <div className="SecondSection__cards-card-info">Got any Questions? we will help you at Anytime, Anywhere</div>
                         </div>
 
                     </div>

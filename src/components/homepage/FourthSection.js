@@ -11,7 +11,7 @@ const FourthSection = () => {
     }
 
     return (
-        <div className="Fourthsection">
+        <div className="Fourthsection" id="contactus">
             <div className="Fourthsection__contactinfo">
                 <div className="Fourthsection__contactinfo-info">
                     <div>

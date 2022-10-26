@@ -10,7 +10,7 @@ import Friends from '../../Images/Friends.png';
 const ThirdSection = () => {
     const [active, setActive] = useState('haveRoom');
     return (
-        <div className="ThirdSection">
+        <div className="ThirdSection" id="howitworks">
             <div className="SecondSection__title">
                 How Dream Shelter Works?
             </div>

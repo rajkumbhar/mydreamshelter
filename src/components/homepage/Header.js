@@ -11,7 +11,7 @@ const Header = () => {
 
           {/* cover video */}
           <div className="bg-video">
-            <video className="bg-video__content" autoPlay muted loop>
+            <video className="bg-video__content" playsinline autobuffer autoPlay muted loop>
               <source src={Friends} type="video/mp4"/>
             </video>
           </div>
